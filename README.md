@@ -36,7 +36,7 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 
 **2. Gry Kasynowe**
 
-- Automaty
+- Automaty (Jedno ręki bandyta)
 
 - Ruletka
 
@@ -52,7 +52,7 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 
 - Sytuacje losowe - np. zamknięcie jakiś gier na jakiś okres czasu
 
-- Może jakieś misje lub cele np. aby wygrać jakąś liczbę pieniędzy czy coś w tym stylu ale tego nie obiecujemy
+- Może jakieś misje lub cele np. aby wygrać jakąś liczbę pieniędzy czy coś w tym stylu.
 
 
   
