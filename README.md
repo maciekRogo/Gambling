@@ -32,7 +32,7 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 
 - Waluta - Będą to żetony
 
-- Bank - Będzie można wziąść kredyt
+- Bank - Będzie można wziąć kredyt
 
 **2. Gry Kasynowe**
 
