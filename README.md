@@ -36,7 +36,7 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 
 **2. Gry Kasynowe**
 
-- Automaty (Jedno ręki bandyta)
+- Automaty (Jednoręki bandyta)
 
 - Ruletka
 
