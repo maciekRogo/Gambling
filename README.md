@@ -54,6 +54,7 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 
 - Może jakieś misje lub cele np. aby wygrać jakąś liczbę pieniędzy czy coś w tym stylu.
 
-
+## Kanały Komunikacji 
+Mamy 2 kanały komunikacji, mamy grupe na discord oraz mamy grupe na messenger
   
   
