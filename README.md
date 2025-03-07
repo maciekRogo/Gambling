@@ -1,68 +1,59 @@
 # Kasyno
 
 ## Opis projektu  
-Tworzymy grę 2D inspirowaną *Stardew Valley*, ale osadzoną w klimacie kasyna. Gracz wciela się w postać, która odwiedza kasyno i bierze udział w różnych grach hazardowych. Rozgrywka opiera się na symulacji życia w świecie kasynowym, z elementami strategii i losowości.  
+Tworzymy grę 2D inspirowaną *Stardew Valley*, ale osadzoną w klimacie kasyna. Gracz będzie mógł chodzić po mapie między różnymi grami hazardowymi takimi jak poker, automaty, blackjack i inne. Rozgrywka opiera się na symulacji grania w gry hazardowe które są w prawdziwym życiu. Gracz będzie musiał używać strategii oraz pomysłów aby się wzbogacić i mieć więcej waluty jaką są żetony w naszej grze.
 
 ## Skład grupy  
-**Maciek Roguszczak, Jan Wróblewski, Victor Moskwa**  
+**Maciek Roguszczak** 
+**Jan Wróblewski** 
+**Victor Moskwa**  
 
 ## Podział ról  
-- **Maciek** → Leader  
-- **Jan** → Tester  
-- **Victor** → Developer  
+- **Maciek** → Leader
+- **Jan** → Tester 
+- **Victor** → Developer
+Wiadomo że i tak będziemy się mieszać aby różne osoby będą wykonywać rózne rzeczy 
 
 ## Środowisko uruchomieniowe  
-Gra będzie dostępna w wersji desktopowej.  
+Gra będzie dostępna w wersji desktopowej na Windows.  
 
 ## Silnik gry  
-Prawdopodobnie skorzystamy z **Godota**, ale decyzja nie jest jeszcze ostateczna.
+Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wykorzystaniem python
 
-## Milestones
+## Zakres funkcjonalności 
 
-### Milestone 1: Planowanie i organizacja
-- Stworzenie szczegółowej dokumentacji projektu  
-- Finalna decyzja o silniku gry (Godot lub alternatywa)  
-- Podział ról i określenie priorytetów  
-- Przygotowanie środowiska developerskiego  
+**1. Ogólna rozgrywka**
 
-### Milestone 2: Podstawowe mechaniki gry
-- Implementacja podstawowego świata kasyna (prosta mapa)  
-- System poruszania się postaci i interakcji z otoczeniem  
-- Podstawowy interfejs użytkownika  
+- Otwarte kasyno – gracz może swobodnie poruszać się po budynku i odkrywać różne gry.
+  
+- Różne pomieszczenia - główna sala z automatami, kolejna sala z blackjack, itd.
+  
+- Interakcja z NPC – rozmowy z krupierami i gośćmi kasyna (krupierzy, inni gracze (NPC) ).
 
-### Milestone 3: Pierwsza minigra – Jednoręki bandyta
-- Implementacja pierwszej gry hazardowej (slot machine)  
-- Podstawowy system ekonomii (pieniądze, wygrane i przegrane)  
+- Waluta - Będą to żetony
 
-### Milestone 4: Rozbudowa kasyna
-- Dodanie kolejnych pomieszczeń i interakcji  
-- Implementacja nowej gry hazardowej (np. blackjack)  
-- Animacje i podstawowe efekty wizualne  
+- Bank - Będzie można wziąść kredyt
 
-### Milestone 5: System NPC i interakcji
-- Wprowadzenie NPC (krupierzy, gracze)  
-- System prostych dialogów  
+**2. Gry Kasynowe**
 
-### Milestone 6: Dodatkowe gry hazardowe i balans ekonomii
-- Implementacja kolejnej gry (np. ruletka)  
-- Dopracowanie systemu ekonomii (balans wygranych/przegranych)  
-- Poprawki interakcji z NPC  
+- Automaty
 
-### Milestone 7: Optymalizacja i dodanie efektów audio-wizualnych
-- Poprawa wydajności gry  
-- Dodanie dźwięków do gier hazardowych  
-- Efekty wizualne (światła, animacje, UI)  
+- Ruletka
 
-### Milestone 8: Testowanie i poprawki
-- Intensywne testowanie gry  
-- Naprawa bugów i ulepszanie mechanik  
+- Poker
 
-### Milestone 9: Finalizacja projektu na potrzeby lekcji
-- Ostateczna poprawa UI i UX  
-- Dopracowanie prezentacji gry  
-- Przygotowanie kodu i zasobów do pokazania nauczycielowi  
+- Blackjack
 
-### Milestone 10: Ostateczne poprawki i prezentacja gry
-- Sprawdzenie działania wszystkich funkcji  
-- Finalne testy i poprawki na lekcji  
-- Przygotowanie krótkiego podsumowania projektu  
+- Bakarat
+
+**3. Inne**
+
+- Cykl dnia oraz nocy - różne NPC w różnych porach dnia
+
+- Sytuacje losowe - np. zamknięcie jakiś gier na jakiś okres czasu
+
+- Może jakieś misje lub cele np. aby wygrać jakąś liczbę pieniędzy czy coś w tym stylu ale tego nie obiecujemy
+
+
+  
+  
