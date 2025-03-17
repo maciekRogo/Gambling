@@ -1,0 +1,31 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1741898023
+icon.svg::CompressedTexture2D::6801895164791717118::1741896640::1741896726::1::::<><><>0<>0<>709857d7dcd81ec0a58360630acfdf2b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+mapatemplate.tscn::PackedScene::1422184091546752347::1741898023::0::1::::<><><>0<>0<><>::uid://bp6chaidv8uru::::res://2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/2D_TopDown_Tileset_Casino_640x512.png<>uid://du43eor7kwbo1::::res://player.gd<>uid://cixoqg3cgfsnv::::res://sprites/44427.jpg<>uid://dwa6om64p3qru::::res://sprites/yeah.jpg
+README.md::TextFile::-1::1741896640::0::1::::<><><>0<>0<><>::
+player.gd::GDScript::8624613860737505290::1741897841::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://2D Top Down Pixel Art Tileset Casino/::1741896640
+::res://2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/::1741896726
+2D_TopDown_Tileset_Casino_640x512.png::CompressedTexture2D::3503382995706432478::1741896640::1741896726::1::::<><><>0<>0<>4832ca158646e824dad9d779b059ba4f<>res://.godot/imported/2D_TopDown_Tileset_Casino_640x512.png-8e8982938639c383e562b6cf56906d17.ctex::
+2D_TopDown_Tileset_Casino_1024x512.png::CompressedTexture2D::4523371568535078230::1741896640::1741896726::1::::<><><>0<>0<>3b87c953583861ec2fbb2e79a7c544ef<>res://.godot/imported/2D_TopDown_Tileset_Casino_1024x512.png-6d34c8e6535f8fcf12653f1874894611.ctex::
+ReadMe.txt::TextFile::-1::1741896640::0::1::::<><><>0<>0<><>::
+::res://2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/Animated Sprite Sheets/::1741896726
+BathroomSinkAnimationSheet.png::CompressedTexture2D::1152457475911794416::1741896640::1741896726::1::::<><><>0<>0<>319b8a0b60d8c2a02cba971bb1d00943<>res://.godot/imported/BathroomSinkAnimationSheet.png-c404b8d45786d7e6add2ec8da4fe5839.ctex::
+DecorativeLightsAnimationSheet.png::CompressedTexture2D::646305190567207779::1741896640::1741896726::1::::<><><>0<>0<>b02aa61cb91139d74d994bb8edadf64a<>res://.godot/imported/DecorativeLightsAnimationSheet.png-21a78eab62289c0d7208fe0ab078fd38.ctex::
+DoorAnimationSheet_0.png::CompressedTexture2D::711851515450887615::1741896640::1741896726::1::::<><><>0<>0<>dc760b752d117e3f20cbfbc58bba6775<>res://.godot/imported/DoorAnimationSheet_0.png-b69819a94ac61d0e8d5da5ae46138276.ctex::
+DoorAnimationSheet_1.png::CompressedTexture2D::3218285374485335884::1741896640::1741896726::1::::<><><>0<>0<>a66c815a12e6d74edc58a1fc933eebd6<>res://.godot/imported/DoorAnimationSheet_1.png-05893fd8d0567c8c2487a0152fbd4002.ctex::
+DoorAnimationSheet_2.png::CompressedTexture2D::4626826669948775670::1741896640::1741896726::1::::<><><>0<>0<>b04291a862e5196f1be742cba28c07b8<>res://.godot/imported/DoorAnimationSheet_2.png-36e7e31670beadcf5a94b980ea3b9b0a.ctex::
+DoorAnimationSheet_3.png::CompressedTexture2D::5918075627460878051::1741896640::1741896726::1::::<><><>0<>0<>4f28a00b9ffd25e1c0eecc3cc51d4fb6<>res://.godot/imported/DoorAnimationSheet_3.png-2c5642c67a7d00226072d5aac87560dc.ctex::
+DoorAnimationSheet_4.png::CompressedTexture2D::2476953528930340320::1741896640::1741896726::1::::<><><>0<>0<>894766388d6d88eeecaa2e36d98674bb<>res://.godot/imported/DoorAnimationSheet_4.png-0aaf37d4810dd9fba171e50e6ab7cd2a.ctex::
+DoorAnimationSheet_5.png::CompressedTexture2D::2286248197663700497::1741896640::1741896726::1::::<><><>0<>0<>18b91e192151e562f9709efaab55c3b4<>res://.godot/imported/DoorAnimationSheet_5.png-62259088a846a78c070da7af12dcbb82.ctex::
+EntranceDoorAnimationSheet.png::CompressedTexture2D::8877310448851957388::1741896640::1741896726::1::::<><><>0<>0<>025e27cafefcbefe4813de203c275856<>res://.godot/imported/EntranceDoorAnimationSheet.png-226374993fbf5b32d6717b32b58125b5.ctex::
+NarrowcastingScreenAnimationSheet.png::CompressedTexture2D::7313019662068412753::1741896640::1741896726::1::::<><><>0<>0<>f9742e7e9ffa1d0f76f71aec2eb0d601<>res://.godot/imported/NarrowcastingScreenAnimationSheet.png-499f0ed38db3a171f99862db59bda872.ctex::
+SlotMachinesAnimationSheet_0.png::CompressedTexture2D::8813842768649387258::1741896640::1741896726::1::::<><><>0<>0<>3760adc5e701048c86b58448931d0a65<>res://.godot/imported/SlotMachinesAnimationSheet_0.png-ad6428918964b2b322ed306df0cc2e7a.ctex::
+SlotMachinesAnimationSheet_1.png::CompressedTexture2D::8530619088042520062::1741896640::1741896726::1::::<><><>0<>0<>f002e62c00a143b2c3748a0680960284<>res://.godot/imported/SlotMachinesAnimationSheet_1.png-8b0b6b5dbfc7157e00f678f04815222c.ctex::
+::res://sprites/::1741898927
+44427.jpg::CompressedTexture2D::5382711773928776031::1741897578::1741898001::1::::<><><>0<>0<>f36f4e29629084235883941319ccac54<>res://.godot/imported/44427.jpg-81ff5c2c063aef0d7b2e8c64dc46ad52.ctex::
+walk1.png::CompressedTexture2D::9079403898826362170::1741898861::1741898935::1::::<><><>0<>0<>8bf243c151685b7b8849998d1f0a3337<>res://.godot/imported/walk1.png-f798fb8a265c6f39fe96f43b98a2e036.ctex::
+walk2.png::CompressedTexture2D::86423118835438482::1741898888::1741898935::1::::<><><>0<>0<>fcef095a41e987e590d035d79d121903<>res://.godot/imported/walk2.png-b5a311c66554e4e9b2c9903917fd2e56.ctex::
+walk3.png::CompressedTexture2D::2902542657407609928::1741898907::1741898935::1::::<><><>0<>0<>f2f8b9b9b4062078a092c27a94e1cbe8<>res://.godot/imported/walk3.png-43c4abc1832ba3002c6ca24681463e5e.ctex::
+walk4.png::CompressedTexture2D::1785203683231622552::1741898927::1741898935::1::::<><><>0<>0<>1c603f39b6e8911d8987d35dce90fd30<>res://.godot/imported/walk4.png-213a9d2c5ac93e5a75a4c6ce2c87ab22.ctex::
+yeah.jpg::CompressedTexture2D::8705324518514375110::1741897994::1741897997::1::::<><><>0<>0<>7da96fc6b033fb0ef0c0db5373d8bf91<>res://.godot/imported/yeah.jpg-02f3354f3923ed68a4b5d26d703c90ea.ctex::

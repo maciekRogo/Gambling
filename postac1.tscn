@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 [gd_scene load_steps=17 format=3 uid="uid://l7qde3n3js5x"]
 
 [ext_resource type="Script" path="res://postac.gd" id="1_qg38e"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://dsrj1adda52fs"]
+
+[ext_resource type="Script" uid="uid://bg4rookpi6jau" path="res://postac.gd" id="1_qg38e"]
+>>>>>>> a94d4dbcb2ee8dbda072b2b97ec90999ce87f692
 [ext_resource type="Texture2D" uid="uid://ch4q8r275m712" path="res://Assets/16x16-RPG-characters/16x16-RPG-characters/preview.png" id="2_qg38e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmsst"]
@@ -143,5 +149,8 @@ position = Vector2(-1.19209e-07, 2.38419e-07)
 scale = Vector2(0.795538, 0.993464)
 sprite_frames = SubResource("SpriteFrames_86lcd")
 animation = &"idle_down"
+<<<<<<< HEAD
 
 [node name="Camera2D" type="Camera2D" parent="."]
+=======
+>>>>>>> a94d4dbcb2ee8dbda072b2b97ec90999ce87f692
