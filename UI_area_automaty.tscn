@@ -1,9 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4votthbpj7hk"]
+[gd_scene load_steps=3 format=3 uid="uid://b4votthbpj7hk"]
+
+[ext_resource type="Script" uid="uid://ddwcae82dijwq" path="res://ui_area_automaty.gd" id="1_pm74e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4jp8h"]
+radius = 46.0109
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["Area"]]
+collision_layer = 2
+script = ExtResource("1_pm74e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Area"]]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_4jp8h")
 one_way_collision_margin = 0.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

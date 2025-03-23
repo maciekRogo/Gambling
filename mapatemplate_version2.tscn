@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://depy5viofnavi"]
+[gd_scene load_steps=14 format=4 uid="uid://depy5viofnavi"]
 
 [ext_resource type="Texture2D" uid="uid://bp6chaidv8uru" path="res://Assets/2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/2D_TopDown_Tileset_Casino_640x512.png" id="1_yjpmk"]
 [ext_resource type="Texture2D" uid="uid://cbppkvc35n2n1" path="res://Assets/House/Houses.png" id="2_2fjps"]
 [ext_resource type="Texture2D" uid="uid://cgbqlfswomnb0" path="res://Assets/House/Interior without swadows.png" id="3_3samo"]
 [ext_resource type="Texture2D" uid="uid://cr5fkhi0wgyj" path="res://Assets/House/Walls and floors.png" id="4_ytfms"]
 [ext_resource type="PackedScene" uid="uid://dsrj1adda52fs" path="res://postac1.tscn" id="5_2fjps"]
+[ext_resource type="PackedScene" uid="uid://b4votthbpj7hk" path="res://UI_area_automaty.tscn" id="6_3samo"]
+[ext_resource type="Script" uid="uid://bg4rookpi6jau" path="res://postac.gd" id="6_da00k"]
+[ext_resource type="PackedScene" uid="uid://ccql4y4u2ew35" path="res://Press_E_to_play.tscn" id="7_ytfms"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5y58g"]
 texture = ExtResource("1_yjpmk")
@@ -5700,7 +5703,7 @@ sources/1 = SubResource("TileSetAtlasSource_da00k")
 sources/2 = SubResource("TileSetAtlasSource_2loxd")
 sources/3 = SubResource("TileSetAtlasSource_jpycu")
 
-[node name="TileMap" type="Node"]
+[node name="TileMap" type="Node" groups=["Area"]]
 
 [node name="Layer0" type="TileMapLayer" parent="."]
 y_sort_enabled = true
@@ -5731,3 +5734,11 @@ tile_set = SubResource("TileSet_uojb6")
 
 [node name="postac" parent="." instance=ExtResource("5_2fjps")]
 position = Vector2(463, 106)
+script = ExtResource("6_da00k")
+
+[node name="Area2D" parent="." instance=ExtResource("6_3samo")]
+visibility_layer = 2
+position = Vector2(404, 55)
+
+[node name="Press_E_to_play" parent="." instance=ExtResource("7_ytfms")]
+position = Vector2(355, 10)
