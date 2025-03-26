@@ -1,8 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://dsrj1adda52fs"]
+[gd_scene load_steps=17 format=3 uid="uid://dsrj1adda52fs"]
 
+[ext_resource type="Script" uid="uid://cit0mtychry6d" path="res://postac_1.gd" id="1_qg38e"]
 [ext_resource type="Texture2D" uid="uid://ch4q8r275m712" path="res://Assets/16x16-RPG-characters/16x16-RPG-characters/preview.png" id="2_qg38e"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gmsst"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg38e"]
+size = Vector2(18, 12)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qg38e"]
 atlas = ExtResource("2_qg38e")
@@ -132,15 +134,18 @@ animations = [{
 }]
 
 [node name="postac" type="CharacterBody2D" groups=["Area"]]
+y_sort_enabled = true
 collision_mask = 2
+script = ExtResource("1_qg38e")
 
 [node name="postac" type="CollisionShape2D" parent="." groups=["Area"]]
 visibility_layer = 2
-shape = SubResource("CapsuleShape2D_gmsst")
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_qg38e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Area"]]
-position = Vector2(-1.19209e-07, 2.38419e-07)
-scale = Vector2(0.795538, 0.993464)
+position = Vector2(1, -7)
+scale = Vector2(0.795538, 0.965482)
 sprite_frames = SubResource("SpriteFrames_86lcd")
 animation = &"idle_down"
 
