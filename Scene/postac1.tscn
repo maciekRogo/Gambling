@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://dsrj1adda52fs"]
 
-[ext_resource type="Script" uid="uid://cit0mtychry6d" path="res://postac_1.gd" id="1_qg38e"]
+[ext_resource type="Script" uid="uid://cit0mtychry6d" path="res://Scripts/postac_1.gd" id="1_qg38e"]
 [ext_resource type="Texture2D" uid="uid://ch4q8r275m712" path="res://Assets/16x16-RPG-characters/16x16-RPG-characters/preview.png" id="2_qg38e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qg38e"]
