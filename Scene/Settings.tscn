@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://cds4d78aus1nv"]
+
+[ext_resource type="Texture2D" uid="uid://c1dujk78tntc2" path="res://Assets/Gotowe_godot-20250403T162231Z-001/Gotowe_godot/pobrany plik1.png" id="1_18x2j"]
+[ext_resource type="Texture2D" uid="uid://b4abmnyx0o6b6" path="res://Assets/Gotowe_godot-20250403T162231Z-001/Gotowe_godot/Sprite sheet for Basic Pack.png" id="2_s8o1i"]
+[ext_resource type="FontFile" uid="uid://b64nxh64nn1ub" path="res://Assets/Gotowe_godot-20250403T162231Z-001/Gotowe_godot/Minecraft.ttf" id="3_60hjb"]
+[ext_resource type="Script" uid="uid://fala2d7d2mc0" path="res://Scripts/button.gd" id="4_s8o1i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_18x2j"]
+texture = ExtResource("2_s8o1i")
+region_rect = Rect2(869, 70, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s8o1i"]
+texture = ExtResource("2_s8o1i")
+region_rect = Rect2(837, 68, 22, 24)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_18x2j")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(300, 500)
+offset_left = 426.0
+offset_top = 74.0
+offset_right = 726.0
+offset_bottom = 574.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_s8o1i")
+region_rect = Rect2(869.07, 6, 22.2965, 22.3862)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.133333, 1)
+theme_override_fonts/font = ExtResource("3_60hjb")
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/hover = SubResource("StyleBoxTexture_18x2j")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s8o1i")
+script = ExtResource("4_s8o1i")

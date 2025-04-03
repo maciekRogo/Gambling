@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Gambling"
-run/main_scene="uid://depy5viofnavi"
+run/main_scene="uid://dpmprefskyww7"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
