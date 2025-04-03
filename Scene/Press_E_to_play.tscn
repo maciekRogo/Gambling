@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ccql4y4u2ew35"]
+
+[node name="Press_E_to_play" type="Node2D" groups=["Area"]]
+visible = false
+
+[node name="Label" type="CanvasGroup" parent="." groups=["Area"]]
+
+[node name="Label" type="Label" parent="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.879999, 0.879999)
+text = "press [e] to play"
