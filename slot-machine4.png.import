@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsvldee7bdjf"
-path="res://.godot/imported/reelMask.png-1a7ec56dd74f92130da5389542dcc028.ctex"
+uid="uid://dohrfjkfx5gpe"
+path="res://.godot/imported/slot-machine4.png-d76b37a2750911498a90371ee9058ad8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/reelMask.png"
-dest_files=["res://.godot/imported/reelMask.png-1a7ec56dd74f92130da5389542dcc028.ctex"]
+source_file="res://slot-machine4.png"
+dest_files=["res://.godot/imported/slot-machine4.png-d76b37a2750911498a90371ee9058ad8.ctex"]
 
 [params]
 

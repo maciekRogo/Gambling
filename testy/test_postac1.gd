@@ -1,6 +1,6 @@
 extends GutTest
 
-const CharacterBody = preload("res://Scripts/postac_1.gd")
+const CharacterBody = preload("res://postac_1.gd")
 
 var character
 
