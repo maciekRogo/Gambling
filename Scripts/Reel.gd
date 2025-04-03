@@ -61,7 +61,7 @@ func _scroll_reel(reel: Sprite2D, speed: float) -> void:
 	if reel.position.y >= 1000:
 		reel.position.y = -1000
 
-func _stopRoll() -> void:
+func _stopRoll() -> void:	
 	tween = create_tween().set_trans(Tween.TRANS_SPRING).set_ease(Tween.EASE_OUT).set_parallel()
 	var rng: int = randi_range(0, 9)
 	var duration: float = 1.5

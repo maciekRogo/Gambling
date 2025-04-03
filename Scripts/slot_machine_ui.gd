@@ -34,14 +34,16 @@ func _receiveNumber(reelID: int, rngResult: int) -> void:
 func _calculateWinning() -> void:
 	bet_value = int($betAmount.value)
 
-	winningMultiplier = (
-		5 if reel_result1 == reel_result2 or reel_result2 == reel_result3 else
-		100 if reel_result1 == reel_result2 and reel_result2 == reel_result3 else
-		-1
-	)
+	if reel_result1 == reel_result2 and reel_result2 == reel_result3:
+		winningMultiplier = 100
+	elif reel_result1 == reel_result2 or reel_result2 == reel_result3:
+		winningMultiplier = 5
+	else:
+		winningMultiplier = -1
 
 	bet_result = bet_value * winningMultiplier
 	$Result.text = "+ " + str(bet_result) if bet_result > 0 else str(bet_result)
+
 
 func _on_spin_button_button_up() -> void:
 	for id in range(1, 4):
