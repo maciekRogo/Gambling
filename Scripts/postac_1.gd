@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 var direction = Vector2.ZERO  # Aktualny kierunek ruchu
 
-func _process(delta):
+func _process(_delta):
 	get_input()
 	move_and_slide()
 	update_animation()

@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3c2cqtdm7tb5"]
+
+[ext_resource type="Script" uid="uid://bfxhe6yc4ilid" path="res://Scripts/Reel.gd" id="1_r7pkk"]
+[ext_resource type="Texture2D" uid="uid://ltbqnool68e0" path="res://Assets/symbole.png" id="2_0sg4t"]
+[ext_resource type="Texture2D" uid="uid://dud6vpao60v7r" path="res://Assets/reelFrame.png" id="3_0fh8k"]
+[ext_resource type="Texture2D" uid="uid://cmsvldee7bdjf" path="res://Assets/reelMask.png" id="4_nvf7a"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vguk3"]
+light_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oe3ov"]
+light_mode = 2
+
+[node name="Reel" type="Node2D"]
+script = ExtResource("1_r7pkk")
+reelID = 1
+
+[node name="reelImage1" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_vguk3")
+position = Vector2(0, -1000)
+texture = ExtResource("2_0sg4t")
+offset = Vector2(0, 400)
+
+[node name="reelImage2" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_oe3ov")
+texture = ExtResource("2_0sg4t")
+offset = Vector2(0, 400)
+
+[node name="ReelFrame" type="Sprite2D" parent="."]
+z_index = 2
+texture = ExtResource("3_0fh8k")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.0
+texture = ExtResource("4_nvf7a")
