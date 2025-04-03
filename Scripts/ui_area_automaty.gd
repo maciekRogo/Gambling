@@ -24,9 +24,9 @@ func _on_body_exited(body):
 		prompt_label.visible = false  
 		player_inside = false  
 		
-func _process(delta):
+func _process(_delta):
 	if player_inside and Input.is_action_just_pressed("ui_click"):  
-		get_tree().change_scene_to_file("res://automaty_gra.tscn")  
+		get_tree().change_scene_to_file("res://Scene/slot_machine.tscn")  
 		print("player_inside:", player_inside)
 
 
