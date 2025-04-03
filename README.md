@@ -40,7 +40,7 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 
 - Ruletka
 
-- Poker
+- Poker 
 
 - Blackjack
 
@@ -57,4 +57,6 @@ Będziemy korzystać z **Godota** jest to coś podobnego do unity tylko że z wy
 ## Kanały Komunikacji 
 Mamy 2 kanały komunikacji, mamy grupe na discord oraz mamy grupe na messenger
   
+
+
   
