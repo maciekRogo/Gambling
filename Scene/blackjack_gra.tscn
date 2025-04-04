@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0n57iybhejre"]
 
-[ext_resource type="Script" path="res://Scripts/blackjack_gra.gd" id="1_a820u"]
+[ext_resource type="Script" uid="uid://dn226o2vjue6b" path="res://Scripts/blackjack_gra.gd" id="1_a820u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jywjw"]
 
