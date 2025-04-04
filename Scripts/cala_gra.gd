@@ -247,7 +247,7 @@ func playerDraw():
 
 
 func _on_Wyjdz_pressed():
-	get_tree().change_scene_to_file("res://Scne/blackjack_gra.tscn")
+	get_tree().change_scene_to_file("res://Scene/blackjack_gra.tscn")
 
 
 func _on_ZagrajPonownie_pressed():

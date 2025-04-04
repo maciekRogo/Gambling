@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cihhgjgr8y6f7"]
 
-[ext_resource type="Script" uid="uid://dle2xx2aj7hlc" path="res://Scene/cala_gra.gd" id="1_ame15"]
+[ext_resource type="Script" path="res://Scripts/cala_gra.gd" id="1_ame15"]
 
 [node name="BlackjackGame" type="Control"]
 layout_mode = 3
