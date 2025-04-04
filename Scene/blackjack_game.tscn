@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://cihhgjgr8y6f7"]
+
+[ext_resource type="Script" uid="uid://dle2xx2aj7hlc" path="res://Scene/cala_gra.gd" id="1_ame15"]
+
+[node name="BlackjackGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ame15")
+
+[node name="Buttons" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 1065.0
+offset_top = 242.0
+offset_right = 1148.0
+offset_bottom = 354.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
+layout_mode = 2
+
+[node name="Dobierz" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+text = "Dobierz"
+vertical_icon_alignment = 0
+
+[node name="Zostaw" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+text = "Zostaw"
+vertical_icon_alignment = 0
+
+[node name="Karty" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -400.365
+offset_right = 1383.56
+offset_bottom = 1000.0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/margin_left = 1015
+
+[node name="Hands" type="VBoxContainer" parent="Karty"]
+layout_mode = 2
+alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="Karty/Hands"]
+layout_mode = 2
+
+[node name="Bot" type="HBoxContainer" parent="Karty/Hands"]
+layout_mode = 2
+alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="Karty/Hands"]
+layout_mode = 2
+
+[node name="Gracz" type="HBoxContainer" parent="Karty/Hands"]
+layout_mode = 2
+alignment = 1
+
+[node name="BotWynik" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 151.0
+offset_right = 1150.0
+offset_bottom = 179.0
+
+[node name="GraczWynik" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 320.0
+offset_right = 1149.0
+offset_bottom = 343.0
+
+[node name="tura" type="Label" parent="."]
+layout_mode = 0
+offset_left = 779.0
+offset_top = 532.0
+offset_right = 1153.0
+offset_bottom = 643.0
+text = "Tura Gracza"
+horizontal_alignment = 2
+
+[node name="WygranaTekst" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 531.0
+offset_right = 459.0
+offset_bottom = 642.0
+text = "Wygrał Gracz "
+
+[node name="ZagrajPonownie" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 574.0
+offset_bottom = 34.0
+text = "Zagraj Ponownie"
+
+[node name="Wyjdz" type="Button" parent="."]
+layout_mode = 0
+offset_left = 665.0
+offset_right = 1156.0
+offset_bottom = 31.0
+text = "Wyjdz"
+
+[connection signal="pressed" from="Buttons/VBoxContainer/Dobierz" to="." method="_on_dobierz_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Zostaw" to="." method="_on_zostaw_pressed"]
+[connection signal="pressed" from="ZagrajPonownie" to="." method="_on_ZagrajPonownie_pressed"]
+[connection signal="pressed" from="Wyjdz" to="." method="_on_Wyjdz_pressed"]

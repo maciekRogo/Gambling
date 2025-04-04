@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://depy5viofnavi"]
+[gd_scene load_steps=17 format=4 uid="uid://depy5viofnavi"]
 
 [ext_resource type="Texture2D" uid="uid://bp6chaidv8uru" path="res://Assets/2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/2D_TopDown_Tileset_Casino_640x512.png" id="1_32fxq"]
+[ext_resource type="PackedScene" uid="uid://betlmv5phk46p" path="res://Scene/Press_E_to_play_blackjack.tscn" id="5_aboty"]
 [ext_resource type="PackedScene" uid="uid://dsrj1adda52fs" path="res://Scene/postac1.tscn" id="5_xtgfu"]
+[ext_resource type="Script" uid="uid://pwxue27742o2" path="res://Scripts/ui_area_blackjack.gd" id="6_1sia8"]
 [ext_resource type="PackedScene" uid="uid://b4votthbpj7hk" path="res://Scene/UI_area_automaty.tscn" id="6_nh6nc"]
 [ext_resource type="PackedScene" uid="uid://ccql4y4u2ew35" path="res://Scene/Press_E_to_play.tscn" id="7_0sjax"]
 
@@ -836,7 +838,6 @@ texture = ExtResource("1_32fxq")
 8:24/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ji36p"]
-load_path = "res://.godot/imported/Houses.png-291a06c44e882afd4a489d12aaecaed9.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da00k"]
 texture = SubResource("CompressedTexture2D_ji36p")
@@ -4196,7 +4197,6 @@ texture = SubResource("CompressedTexture2D_ji36p")
 128:25/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aboty"]
-load_path = "res://.godot/imported/Interior without swadows.png-ab00c8134a78dac665bc50af1f1c9c6f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2loxd"]
 texture = SubResource("CompressedTexture2D_aboty")
@@ -5394,7 +5394,6 @@ texture = SubResource("CompressedTexture2D_aboty")
 15:52/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1sia8"]
-load_path = "res://.godot/imported/Walls and floors.png-ebef1bba1f78ac84fc0e79ac876db03f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpycu"]
 texture = SubResource("CompressedTexture2D_1sia8")
@@ -5803,7 +5802,8 @@ visibility_layer = 2
 position = Vector2(404, 55)
 
 [node name="Press_E_to_play" parent="." instance=ExtResource("7_0sjax")]
-position = Vector2(355, 10)
+visible = false
+position = Vector2(354, -10)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -5813,3 +5813,13 @@ shape = SubResource("CircleShape2D_ytfms")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(492, -162, 779, -163, 779, 448, 171, 449, 171, 462, 139, 463, 139, 427, 171, 427, 170, -164, 459, -164, 460, -207, 492, -205, 491, -172, 620, -350, 94, -347, -538, -194, -72, 489, 347, 631, 1084, 605, 1007, 202, 877, -287, 704, -382, 493, -168)
+
+[node name="Press_E_to_play_Blackjack" parent="." instance=ExtResource("5_aboty")]
+visible = false
+position = Vector2(522, 113)
+
+[node name="Area2D3" parent="." instance=ExtResource("6_nh6nc")]
+visibility_layer = 2
+position = Vector2(582.765, 183)
+scale = Vector2(1.375, 1.375)
+script = ExtResource("6_1sia8")

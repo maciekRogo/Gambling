@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ccql4y4u2ew35"]
 
 [node name="Press_E_to_play" type="Node2D" groups=["Area"]]
-visible = false
 
 [node name="Label" type="CanvasGroup" parent="." groups=["Area"]]
 
