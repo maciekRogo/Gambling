@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjekn1ykfpny1"]
+
+[ext_resource type="Script" uid="uid://m0p87h2whot5" path="res://Scripts/HUD.gd" id="1_0apqc"]
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_0apqc")
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Money: 1000"

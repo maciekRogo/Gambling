@@ -42,10 +42,23 @@ func _calculateWinning() -> void:
 		winningMultiplier = -1
 
 	bet_result = bet_value * winningMultiplier
+
+	if bet_result > 0:
+		SigBank.money += bet_result
+	else:
+		SigBank.money -= bet_value
+
 	$Result.text = "+ " + str(bet_result) if bet_result > 0 else str(bet_result)
 
-
 func _on_spin_button_button_up() -> void:
+	bet_value = int($betAmount.value)
+	
+	if bet_value > SigBank.money:
+		$Result.text = "Brak pieniędzy!"
+		return
+
+	$Result.text = "" 
+
 	for id in range(1, 4):
 		SigBank.startRoll.emit(id, 2.0 + (id - 1) * 0.5)
 

@@ -836,7 +836,6 @@ texture = ExtResource("1_32fxq")
 8:24/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ji36p"]
-load_path = "res://.godot/imported/Houses.png-291a06c44e882afd4a489d12aaecaed9.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da00k"]
 texture = SubResource("CompressedTexture2D_ji36p")
@@ -4196,7 +4195,6 @@ texture = SubResource("CompressedTexture2D_ji36p")
 128:25/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aboty"]
-load_path = "res://.godot/imported/Interior without swadows.png-ab00c8134a78dac665bc50af1f1c9c6f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2loxd"]
 texture = SubResource("CompressedTexture2D_aboty")
@@ -5394,7 +5392,6 @@ texture = SubResource("CompressedTexture2D_aboty")
 15:52/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1sia8"]
-load_path = "res://.godot/imported/Walls and floors.png-ebef1bba1f78ac84fc0e79ac876db03f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpycu"]
 texture = SubResource("CompressedTexture2D_1sia8")
