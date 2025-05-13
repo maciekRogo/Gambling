@@ -34,6 +34,11 @@ func _receiveNumber(reelID: int, rngResult: int) -> void:
 func _calculateWinning() -> void:
 	bet_value = int($betAmount.value)
 
+	if reel_result1 == null or reel_result2 == null or reel_result3 == null:
+		bet_result = -bet_value
+		$Result.text = str(bet_result)
+		return
+
 	if reel_result1 == reel_result2 and reel_result2 == reel_result3:
 		winningMultiplier = 100
 	elif reel_result1 == reel_result2 or reel_result2 == reel_result3:
@@ -49,6 +54,7 @@ func _calculateWinning() -> void:
 		SigBank.money -= bet_value
 
 	$Result.text = "+ " + str(bet_result) if bet_result > 0 else str(bet_result)
+
 
 func _on_spin_button_button_up() -> void:
 	bet_value = int($betAmount.value)
