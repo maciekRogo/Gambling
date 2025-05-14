@@ -64,3 +64,42 @@ func test_move_reels_zero_speed():
 	assert_eq(reel.reel1.position.y, initial_pos_reel1, "Po wywołaniu _move_reels() z prędkością 0, reel1 nie powinien zmienić pozycji")
 	assert_eq(reel.reel2.position.y, initial_pos_reel2, "Po wywołaniu _move_reels() z prędkością 0, reel2 nie powinien zmienić pozycji")
 	
+func test_stop_roll_sets_z_index_correctly() -> void:
+	reel.reel1.position.y = -1001
+	reel.reel2.position.y = 0
+
+	await reel._stopRoll()
+
+	assert_eq(reel.reel1.z_index, 1, "Top reel (reel1) powinien mieć z_index 1")
+	assert_eq(reel.reel2.z_index, 0, "Bottom reel (reel2) powinien mieć z_index 0")
+
+func test_stop_roll_position_offset() -> void:
+	reel.reel1.position.y = -1001
+	reel.reel2.position.y = 0
+	
+	await reel._stopRoll()
+	
+	var top_y = reel.reel1.position.y if reel.reel1.z_index == 1 else reel.reel2.position.y
+	var bottom_y = reel.reel2.position.y if reel.reel1.z_index == 1 else reel.reel1.position.y
+	
+	assert_almost_eq(bottom_y - top_y, 1000.0, 0.1, "Dolny bęben powinien być dokładnie 1000px niżej niż górny")
+
+func test_start_roll_resets_roll_back_duration():
+	reel.roll_back_duration = 0.0
+	reel._startRoll(reel.reelID, 4.0)
+	assert_eq(reel.roll_back_duration, 0.25, "roll_back_duration powinien być resetowany do 0.25")
+
+func test_process_changes_state_to_roll_and_then_stop():
+	reel._startRoll(reel.reelID, 0.1) 
+	await get_tree().process_frame
+
+	await get_tree().create_timer(0.5).timeout 
+
+	assert_eq(reel.state, reel.STOP, "Po zakończeniu roll_duration stan powinien być STOP")
+
+
+
+func test_scroll_reel_wraps_properly():
+	reel.reel1.position.y = 1001
+	reel._scroll_reel(reel.reel1, 0)  
+	assert_eq(reel.reel1.position.y, -1000.0, "Pozycja y powinna zostać zawinięta do -1000")

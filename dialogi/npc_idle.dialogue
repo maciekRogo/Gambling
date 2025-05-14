@@ -1,0 +1,7 @@
+~ start
+NPC: Pamiętaj, młody... automaty to nie są twoi przyjaciele.
+NPC: Ale też się nie poddawaj za szybko. Czasem trzeba przegrać, żeby nauczyć się wygrywać.
+NPC: Najważniejsze to grać z głową... i znać moment, kiedy odejść.
+set SigBank.is_chatting = false
+set SigBank.is_roaming = true
+=> END
