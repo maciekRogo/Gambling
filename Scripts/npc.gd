@@ -6,7 +6,7 @@ var current_state = IDLE
 var dir = Vector2.RIGHT
 var start_pos
 
-
+@onready var anim_sprite = $AnimatedSprite2D
 
 var player
 var player_in_chat_zone = false
@@ -22,16 +22,16 @@ func _ready():
 	start_pos = position
 func _process(delta):
 	if current_state == 0 or current_state == 1:
-		$AnimatedSprite2D.play("idle")
+		anim_sprite.play("idle")
 	elif current_state == 2 and !SigBank.is_chatting:
 		if dir.x == -1:
-			$AnimatedSprite2D.play("walk_w")
+			anim_sprite.play("walk_w")
 		if dir.x == 1:
-			$AnimatedSprite2D.play("walk_e")
+			anim_sprite.play("walk_e")
 		if dir.y == -1:
-			$AnimatedSprite2D.play("walk_n")
+			anim_sprite.play("walk_n")
 		if dir.y == 1:
-			$AnimatedSprite2D.play("walk_s")
+			anim_sprite.play("walk_s")
 
 	if SigBank.is_roaming:
 		match current_state:
@@ -45,7 +45,7 @@ func _process(delta):
 		print("chatting with npc")
 		SigBank.is_roaming = false
 		SigBank.is_chatting = true
-		$AnimatedSprite2D.play("idle")
+		anim_sprite.play("idle")
 		start_dialogue()
 		
 func start_dialogue():
