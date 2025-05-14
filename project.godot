@@ -21,6 +21,10 @@ SigBank="*res://Scripts/SignalBank.gd"
 HUD="*res://Scene/HUD.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
+[display]
+
+window/size/viewport_width=1732
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/gut/plugin.cfg")
