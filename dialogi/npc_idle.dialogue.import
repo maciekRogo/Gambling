@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvq8n3y64hu66"
+path="res://.godot/imported/npc_idle.dialogue-96cf56a5737d9452265f2bf5cde1bf22.tres"
+
+[deps]
+
+source_file="res://dialogi/npc_idle.dialogue"
+dest_files=["res://.godot/imported/npc_idle.dialogue-96cf56a5737d9452265f2bf5cde1bf22.tres"]
+
+[params]
+
+defaults=true

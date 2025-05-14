@@ -1,0 +1,21 @@
+~ start
+NPC: [[Hej|Siema|Witaj]], młody. Słyszałem, że próbujesz szczęścia na automatach?
+NPC: Uważaj, te maszyny potrafią wciągnąć jak bagno.
+
+NPC: Co chcesz wiedzieć?
+
+- Masz jakieś rady?
+	NPC: Jasne. Graj tylko wtedy, gdy dobrze się bawisz, a nie żeby się wzbogacić.
+	NPC: I zawsze ustal sobie limit. Jak wygrasz — świetnie. Jak przegrasz — trudno, ale nie wpadaj w złość.
+
+- Ja nigdy nie przegrywam!
+	NPC: Heh... to znaczy, że jeszcze nie grałeś wystarczająco długo.
+	NPC: Nawet najlepsi miewają gorsze dni. Liczy się, jak sobie z tym radzisz.
+
+- Maszyny są ustawione! Oszukują!
+	NPC: Może i tak, ale to gra losowa. Lepiej się z tym pogodzić i nie brać jej zbyt serio.
+
+
+NPC: Powodzenia... i pamiętaj, najważniejsza jest frajda z gry.
+
+=> END
