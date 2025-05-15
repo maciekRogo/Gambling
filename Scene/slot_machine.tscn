@@ -15,7 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_1hbnv")
 
 [node name="Slot-machine1" type="Sprite2D" parent="."]
-position = Vector2(589, 326)
+position = Vector2(880, 326)
 texture = ExtResource("2_12ki6")
 
 [node name="ReelContainer1" type="Control" parent="."]
