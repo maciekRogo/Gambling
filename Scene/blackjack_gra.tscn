@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://fg0vv2vycai"]
+
+[ext_resource type="Script" path="res://Scripts/blackjack_gra.gd" id="1_a820u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jywjw"]
+
+[node name="BlackjackGra" type="Control"]
+layout_mode = 3
+anchor_right = 1.169
+anchor_bottom = 1.418
+offset_left = -73.0
+offset_top = -31.0
+offset_right = -72.688
+offset_bottom = -30.8641
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a820u")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 35.0
+offset_right = 1143.0
+offset_bottom = 645.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Zaczij gre"
+alignment = 0
+vertical_icon_alignment = 2
+
+[node name="CloseGame" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Zamknij gre"
+alignment = 0
+vertical_icon_alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Blackjack"
+label_settings = SubResource("LabelSettings_jywjw")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CloseGame" to="." method="_on_close_game_pressed"]
