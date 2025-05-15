@@ -17,39 +17,10 @@ var current_bet = 0
 func _ready():
 	$ZagrajPonownie.visible = false
 	$WygranaTekst.visible = false
-	$Buttons/VBoxContainer/Dobierz.disabled = false
-	$Buttons/VBoxContainer/Zostaw.disabled = false
+	$Buttons/VBoxContainer/Dobierz.disabled = true
+	$Buttons/VBoxContainer/Zostaw.disabled = true
 	create_card_data()
 	updateText()
-
-func _on_Start_pressed():
-	print("Start wciśnięty!")
-
-	var bet_input = $Buttons/VBoxContainer/BetInput
-	var bet_text = bet_input.text.strip_edges()
-	print("Odczytany tekst:", bet_text)
-
-	if bet_text.is_valid_int():
-		var bet = int(bet_text)
-		if bet > 0 and bet <= SigBank.money:
-			current_bet = bet
-			SigBank.modify_money(-current_bet)
-			print("USTAWIONY ZAKŁAD: ", current_bet)
-
-			$Start.disabled = true
-			$Buttons/VBoxContainer/Dobierz.disabled = false
-			$Buttons/VBoxContainer/Zostaw.disabled = false
-
-			start_game()
-		else:
-			$WygranaTekst.text = "Invalid bet!"
-			$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
-			$WygranaTekst.visible = true
-	else:
-		$WygranaTekst.text = "Enter a valid number"
-		$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
-		$WygranaTekst.visible = true
-	
 
 func start_game():
 	var bet_input = $Buttons/VBoxContainer/BetInput
@@ -58,13 +29,31 @@ func start_game():
 
 	if bet_text.is_valid_int():
 		var bet = int(bet_text)
-		if bet > 0 and bet <= SigBank.money:
-			current_bet = bet
-			SigBank.modify_money(-current_bet)
-			print("USTAWIONY ZAKŁAD: ", current_bet)
+		if bet <= 0:
+			$WygranaTekst.text = "Bet must be greater than 0"
+			$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
+			$WygranaTekst.visible = true
+			return
+		if bet > SigBank.money:
+			$WygranaTekst.text = "Not enough money!"
+			$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
+			$WygranaTekst.visible = true
+			return
+
+		current_bet = bet
+		SigBank.modify_money(-current_bet)
+		print("USTAWIONY ZAKŁAD: ", current_bet)
+	else:
+		$WygranaTekst.text = "Enter a valid number"
+		$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
+		$WygranaTekst.visible = true
+		return
+
+	$Buttons/VBoxContainer/Start.disabled = true
+	$Buttons/VBoxContainer/Dobierz.disabled = false
+	$Buttons/VBoxContainer/Zostaw.disabled = false
 	print("Kasa po postawieniu zakładu:", SigBank.money)
 
-	# Resetujemy stan gry
 	playerScore = 0
 	dealerScore = 0
 	playerCards.clear()
@@ -94,6 +83,7 @@ func start_game():
 
 	if playerScore == 21:
 		playerWin(true)
+
 
 func _on_dobierz_pressed():
 	generate_card("player")
@@ -249,3 +239,60 @@ func playerHasAce(cards):
 		if card[0] == 11:
 			return true
 	return false
+
+
+
+# kod poniżej został stworzony dla testów
+
+
+func end_game_sync(color):
+	$WygranaTekst.set("theme_override_colors/font_color", Color(color))
+	$Buttons/VBoxContainer/Dobierz.disabled = true
+	$Buttons/VBoxContainer/Zostaw.disabled = true
+	$WygranaTekst.visible = true
+	$ZagrajPonownie.visible = true
+
+func start_game_sync():
+	var bet_input = $Buttons/VBoxContainer/BetInput
+	var bet_text = bet_input.text.strip_edges()
+
+	if bet_text.is_valid_int():
+		var bet = int(bet_text)
+		if bet <= 0:
+			$WygranaTekst.text = "Bet must be greater than 0"
+			$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
+			$WygranaTekst.visible = true
+			return
+		if bet > SigBank.money:
+			$WygranaTekst.text = "Not enough money!"
+			$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
+			$WygranaTekst.visible = true
+			return
+
+		current_bet = bet
+		SigBank.modify_money(-current_bet)
+	else:
+		$WygranaTekst.text = "Enter a valid number"
+		$WygranaTekst.set("theme_override_colors/font_color", Color.RED)
+		$WygranaTekst.visible = true
+		return
+
+	$Buttons/VBoxContainer/Start.disabled = true
+	playerScore = 0
+	dealerScore = 0
+	playerCards.clear()
+	dealerCards.clear()
+
+	for child in $Karty/Hands/Gracz.get_children():
+		child.queue_free()
+	for child in $Karty/Hands/Bot.get_children():
+		child.queue_free()
+
+	generate_card("player")
+	generate_card("player")
+	generate_card("dealer", true)
+	generate_card("dealer")
+	updateText()
+
+	if playerScore == 21:
+		playerWin(true)
