@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://depy5viofnavi"]
+[gd_scene load_steps=18 format=4 uid="uid://depy5viofnavi"]
 
 [ext_resource type="Texture2D" uid="uid://bp6chaidv8uru" path="res://Assets/2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/2D_TopDown_Tileset_Casino_640x512.png" id="1_32fxq"]
 [ext_resource type="PackedScene" uid="uid://85q2ky4b70bn" path="res://Scene/npc.tscn" id="5_aboty"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d4y0lxfcg6a7" path="res://Scripts/ui_area_blackjack.gd" id="6_1sia8"]
 [ext_resource type="PackedScene" uid="uid://b4votthbpj7hk" path="res://Scene/UI_area_automaty.tscn" id="6_nh6nc"]
 [ext_resource type="PackedScene" uid="uid://ccql4y4u2ew35" path="res://Scene/Press_E_to_play.tscn" id="7_0sjax"]
+[ext_resource type="Script" uid="uid://bbqas0q0vx4sf" path="res://Scene/ui_area_roulette.gd" id="7_32fxq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5y58g"]
 texture = ExtResource("1_32fxq")
@@ -5824,4 +5825,14 @@ script = ExtResource("6_1sia8")
 
 [node name="Press_E_to_play_Blackjack" parent="." instance=ExtResource("7_0sjax")]
 position = Vector2(516, 109)
+scale = Vector2(1.155, 1.155)
+
+[node name="Area2D3" parent="." instance=ExtResource("6_nh6nc")]
+visibility_layer = 2
+position = Vector2(376, 293)
+scale = Vector2(1.44, 1.44)
+script = ExtResource("7_32fxq")
+
+[node name="Press_E_to_play_roulette" parent="." instance=ExtResource("7_0sjax")]
+position = Vector2(317, 220)
 scale = Vector2(1.155, 1.155)

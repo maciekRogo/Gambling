@@ -229,7 +229,7 @@ func updateText():
 	$GraczWynik.text = str(playerScore)
 
 func _on_Wyjdz_pressed():
-	get_tree().change_scene_to_file("res://Scene/blackjack_gra.tscn")
+	get_tree().change_scene_to_file("res://Scene/mapatemplate_version2.tscn")
 
 func _on_ZagrajPonownie_pressed():
 	get_tree().change_scene_to_file("res://Scene/blackjack_game.tscn")

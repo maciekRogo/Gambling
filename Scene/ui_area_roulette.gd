@@ -1,7 +1,7 @@
 
 extends Area2D
 
-@onready var prompt_label = $"/root/TileMap/Press_E_to_play_Blackjack"
+@onready var prompt_label = $"/root/TileMap/Press_E_to_play_roulette"
 var player_inside = false
 
 
@@ -26,7 +26,7 @@ func _on_body_exited(body):
 		
 func _process(_delta):
 	if player_inside and Input.is_action_just_pressed("ui_click"):  
-		get_tree().change_scene_to_file("res://Scene/blackjack_game.tscn")  
+		get_tree().change_scene_to_file("res://Scene/roulette.tscn")  
 		print("player_inside:", player_inside)
 
 
