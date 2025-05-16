@@ -114,7 +114,7 @@ text = "Wyjdz"
 
 [connection signal="pressed" from="Buttons/VBoxContainer/Dobierz" to="." method="_on_dobierz_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Zostaw" to="." method="_on_zostaw_pressed"]
-[connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="start_game"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="ZagrajPonownie" to="." method="_on_ZagrajPonownie_pressed"]
 [connection signal="pressed" from="Wyjdz" to="." method="_on_Wyjdz_pressed"]
