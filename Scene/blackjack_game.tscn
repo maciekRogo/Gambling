@@ -13,10 +13,10 @@ script = ExtResource("1_ame15")
 
 [node name="Buttons" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 1470.0
+offset_left = 1648.0
 offset_top = 242.0
-offset_right = 1548.0
-offset_bottom = 389.0
+offset_right = 1733.0
+offset_bottom = 424.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
 layout_mode = 2
@@ -81,9 +81,9 @@ offset_bottom = 343.0
 
 [node name="tura" type="Label" parent="."]
 layout_mode = 0
-offset_left = 779.0
+offset_left = 1360.0
 offset_top = 532.0
-offset_right = 1153.0
+offset_right = 1734.0
 offset_bottom = 643.0
 text = "Tura Gracza"
 horizontal_alignment = 2
@@ -99,17 +99,18 @@ text = "Wygrał Gracz "
 
 [node name="ZagrajPonownie" type="Button" parent="."]
 layout_mode = 0
-offset_left = 3.0
+offset_left = 312.0
 offset_top = 3.0
-offset_right = 574.0
+offset_right = 883.0
 offset_bottom = 34.0
 text = "Zagraj Ponownie"
 
 [node name="Wyjdz" type="Button" parent="."]
 layout_mode = 0
-offset_left = 665.0
-offset_right = 1156.0
-offset_bottom = 31.0
+offset_left = 886.0
+offset_top = 3.0
+offset_right = 1377.0
+offset_bottom = 34.0
 text = "Wyjdz"
 
 [connection signal="pressed" from="Buttons/VBoxContainer/Dobierz" to="." method="_on_dobierz_pressed"]
