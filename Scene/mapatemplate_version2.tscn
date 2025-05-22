@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d4y0lxfcg6a7" path="res://Scripts/ui_area_blackjack.gd" id="6_1sia8"]
 [ext_resource type="PackedScene" uid="uid://b4votthbpj7hk" path="res://Scene/UI_area_automaty.tscn" id="6_nh6nc"]
 [ext_resource type="PackedScene" uid="uid://ccql4y4u2ew35" path="res://Scene/Press_E_to_play.tscn" id="7_0sjax"]
-[ext_resource type="Script" uid="uid://bbqas0q0vx4sf" path="res://Scene/ui_area_roulette.gd" id="7_32fxq"]
+[ext_resource type="Script" uid="uid://bbqas0q0vx4sf" path="res://ui_area_roulette.gd" id="7_32fxq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5y58g"]
 texture = ExtResource("1_32fxq")
