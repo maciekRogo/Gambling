@@ -80,12 +80,12 @@ func on_start_button_pressed():
 		return
 	
 	SigBank.modify_money(-current_bet)
-	print("Zakład postawiony: ", current_bet)
-	print("Pieniądze po zakładzie: ", SigBank.money)
+	#print("Zakład postawiony: ", current_bet)
+	#print("Pieniądze po zakładzie: ", SigBank.money)
 	
 	spin_velocity = randf_range(20.0, 30.0)
 	spinning = true
-	print("Koło się kręci...")
+	#print("Koło się kręci...")
 	$"../Button".disabled = true
 
 func on_bet_button_pressed(button):
@@ -108,7 +108,7 @@ func on_bet_button_pressed(button):
 	else:
 		selected_number = text  # np. EVEN, RED, 1-18 itd.
 
-	print("Obstawiono: ", selected_number)
+	#print("Obstawiono: ", selected_number)
 
 
 func determine_result():
@@ -120,7 +120,7 @@ func determine_result():
 	var winning_index = int(round(total_numbers - normalized_rotation / angle_per_number)) % total_numbers
 	var winning_number = numbers_on_wheel[winning_index]
 
-	print("Wypadła liczba: ", winning_number)
+	#print("Wypadła liczba: ", winning_number)
 
 	var win = false
 	var payout = 0
@@ -166,11 +166,11 @@ func determine_result():
 
 	if win:
 		SigBank.modify_money(payout)
-		print("WYGRAŁEŚ! Wygrana: ", payout)
-	else:
-		print("Przegrałeś. Strata: ", current_bet)
+		#print("WYGRAŁEŚ! Wygrana: ", payout)
+#	else:
+		#print("Przegrałeś. Strata: ", current_bet)
 
-	print("Stan pieniędzy: ", SigBank.money)
+	#print("Stan pieniędzy: ", SigBank.money)
 
 	if selected_button:
 		selected_button.remove_theme_stylebox_override("normal")

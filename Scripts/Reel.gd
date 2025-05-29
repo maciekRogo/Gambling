@@ -24,7 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_released("ui_accept"):
 		_startRoll(reelID, 5)
-		print("rollMe")
+		#print("rollMe")
 
 	match state:
 		ROLLBACK:
@@ -50,7 +50,7 @@ func _startRoll(reelNumber: int, duration: float) -> void:
 	state = ROLLBACK
 	roll_duration = duration
 	roll_back_duration = 0.25
-	print(reelID, reelNumber, duration)
+	#print(reelID, reelNumber, duration)
 
 func _move_reels(speed: float) -> void:
 	_scroll_reel(reel1, speed)
@@ -77,5 +77,5 @@ func _stopRoll() -> void:
 	tween.tween_property(bottom_reel, "position:y", final_pos + 1000, duration)
 
 	await tween.finished
-	print("Reel ID:", reelID, " Reel Image:", top_reel.name, " Position:", final_pos, " RNG:", rng)
+	# print("Reel ID:", reelID, " Reel Image:", top_reel.name, " Position:", final_pos, " RNG:", rng)
 	SigBank.rollFinished.emit(reelID, rng)

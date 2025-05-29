@@ -23,6 +23,10 @@ func before_each():
 func after_each():
 	scene.queue_free()
 
+# ---------------------
+# TESTY JEDNOSTKOWE
+# ---------------------
+
 func test_valid_bet_triggers_start_game():
 	scene.current_bet = 0
 	bet_input.text = "100"
@@ -178,3 +182,71 @@ func test_start_game_blackjack_triggers_win():
 	scene.start_game_sync()
 	assert_eq(wygrana_tekst.text, "Wygrał Gracz ")
 	assert_false(wygrana_tekst.visible)
+
+# ---------------------
+# TESTY INTEGRACYJNE
+# ---------------------
+
+func test_full_game_flow_player_wins_blackjack():
+	SigBank.money = 1000
+	bet_input.text = "100"
+	scene.cardsShuffled = ["ace_spades", "jack_hearts", "9_hearts", "5_diamonds"]
+	scene.card_images = {
+		"ace_spades": [11, "res://dummy.png"],
+		"jack_hearts": [10, "res://dummy.png"],
+		"9_hearts": [9, "res://dummy.png"],
+		"5_diamonds": [5, "res://dummy.png"],
+		"back": [0, "res://dummy.png"]
+	}
+	
+	scene.start_game_sync()
+	
+	assert_eq(scene.current_bet, 100)
+	assert_eq(SigBank.money, 900)
+	assert_eq(scene.playerScore, 14)
+
+func test_full_game_flow_player_busts_and_loses():
+	SigBank.money = 500
+	bet_input.text = "50"
+	scene.cardsShuffled = ["king_hearts", "queen_clubs", "2_spades", "3_diamonds", "5_clubs", "9_hearts"]
+	scene.card_images = {
+		"king_hearts": [10, "res://dummy.png"],
+		"queen_clubs": [10, "res://dummy.png"],
+		"2_spades": [2, "res://dummy.png"],
+		"3_diamonds": [3, "res://dummy.png"],
+		"5_clubs": [5, "res://dummy.png"],
+		"9_hearts": [9, "res://dummy.png"],
+		"back": [0, "res://dummy.png"]
+	}
+
+	scene.start_game_sync()
+
+	assert_eq(scene.current_bet, 50)
+	assert_eq(SigBank.money, 450)
+
+	scene._on_dobierz_pressed()
+	scene._on_dobierz_pressed()
+
+	assert_eq(SigBank.money, 450)  
+
+func test_full_game_flow_player_stands_and_dealer_plays():
+	SigBank.money = 300
+	bet_input.text = "100"
+	scene.cardsShuffled = ["9_hearts", "7_clubs", "6_diamonds", "8_spades", "5_clubs", "4_hearts", "king_diamonds"]
+	scene.card_images = {
+		"9_hearts": [9, "res://dummy.png"],
+		"7_clubs": [7, "res://dummy.png"],
+		"6_diamonds": [6, "res://dummy.png"],
+		"8_spades": [8, "res://dummy.png"],
+		"5_clubs": [5, "res://dummy.png"],
+		"4_hearts": [4, "res://dummy.png"],
+		"king_diamonds": [10, "res://dummy.png"],
+		"back": [0, "res://dummy.png"]
+	}
+
+	scene.start_game_sync()
+
+	assert_eq(scene.current_bet, 100)
+	assert_eq(SigBank.money, 200)
+
+	await scene._on_zostaw_pressed()

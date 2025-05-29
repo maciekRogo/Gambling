@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c53h2nkx5f3io"]
+
+[ext_resource type="Script" uid="uid://7uw7dec1ubyk" path="res://testy/TestyWydajnosciowe.gd" id="2_g6rg3"]
+
+[node name="TestyWydajnosciowe" type="Node2D"]
+
+[node name="cala_gra" type="Node2D" parent="."]
+
+[node name="reel" type="Node2D" parent="."]
+script = ExtResource("2_g6rg3")
