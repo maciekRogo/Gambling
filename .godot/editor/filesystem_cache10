@@ -1,5 +1,5 @@
 afef6734802ee6c19677a3e11de0f0e6
-::res://::1748531217
+::res://::1748533532
 icon.svg::CompressedTexture2D/CompressedTexture2D::6801895164791717118::1747077263::1747077302::1::::<><><>0<>0<>709857d7dcd81ec0a58360630acfdf2b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1747331688::0::1::::<><><>0<>0<><>::
 ::res://addons/::1747244072
@@ -446,20 +446,20 @@ wheel_to_convert.png::CompressedTexture2D/CompressedTexture2D::63559167008261922
 ::res://dialogi/::1747248023
 npc_1.dialogue::Resource/Resource::7346796470518284684::1747247879::1747248008::1::::<><><>0<>0<>6d086a62cde23fda5222e8937c4839a6<>res://.godot/imported/npc_1.dialogue-c72bc048d551d40856650e47c8c35860.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
 npc_idle.dialogue::Resource/Resource::8668286196801657845::1747247805::1747248023::1::::<><><>0<>0<>f79558d5df67fa79c5e5de5a95106db8<>res://.godot/imported/npc_idle.dialogue-96cf56a5737d9452265f2bf5cde1bf22.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://Scene/::1747946811
-blackjack_game.tscn::PackedScene/PackedScene::4523401752722190336::1747946687::0::1::::<><><>0<>0<><>::uid://dle2xx2aj7hlc::::res://Scripts/cala_gra.gd
+::res://Scene/::1748533508
+blackjack_game.tscn::PackedScene::4523401752722190336::1748533508::0::1::::<><><>0<>0<><>::uid://dle2xx2aj7hlc::::res://Scripts/cala_gra.gd
 blackjack_gra.tscn::PackedScene/PackedScene::10731972261530944::1747323139::0::1::::<><><>0<>0<><>::res://Scripts/blackjack_gra.gd
-HUD.tscn::PackedScene/PackedScene::5413430259537212038::1747946686::0::1::::<><><>0<>0<><>::uid://m0p87h2whot5::::res://Scripts/HUD.gd
-mapatemplate_version2.tscn::PackedScene/PackedScene::7472494989577949002::1747946811::0::1::::<><><>0<>0<><>::uid://bp6chaidv8uru::::res://Assets/2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/2D_TopDown_Tileset_Casino_640x512.png<>uid://85q2ky4b70bn::::res://Scene/npc.tscn<>uid://dsrj1adda52fs::::res://Scene/postac1.tscn<>uid://d4y0lxfcg6a7::::res://Scripts/ui_area_blackjack.gd<>uid://b4votthbpj7hk::::res://Scene/UI_area_automaty.tscn<>uid://ccql4y4u2ew35::::res://Scene/Press_E_to_play.tscn<>uid://bbqas0q0vx4sf::::res://Scripts/ui_area_roulette.gd
-npc.tscn::PackedScene/PackedScene::2379183424625615299::1747946686::0::1::::<><><>0<>0<><>::uid://bcwj5o5g15j6g::::res://Scripts/npc.gd<>uid://d3ijj018hlbf7::::res://Assets/Human-Worker-Red.png
+HUD.tscn::PackedScene::5413430259537212038::1748533508::0::1::::<><><>0<>0<><>::uid://m0p87h2whot5::::res://Scripts/HUD.gd
+mapatemplate_version2.tscn::PackedScene::7472494989577949002::1748533508::0::1::::<><><>0<>0<><>::uid://bp6chaidv8uru::::res://Assets/2D Top Down Pixel Art Tileset Casino/2D Top Down Pixel Art Tileset Casino/2D_TopDown_Tileset_Casino_640x512.png<>uid://85q2ky4b70bn::::res://Scene/npc.tscn<>uid://dsrj1adda52fs::::res://Scene/postac1.tscn<>uid://d4y0lxfcg6a7::::res://Scripts/ui_area_blackjack.gd<>uid://b4votthbpj7hk::::res://Scene/UI_area_automaty.tscn<>uid://ccql4y4u2ew35::::res://Scene/Press_E_to_play.tscn<>uid://bbqas0q0vx4sf::::res://Scripts/ui_area_roulette.gd
+npc.tscn::PackedScene::2379183424625615299::1748533508::0::1::::<><><>0<>0<><>::uid://bcwj5o5g15j6g::::res://Scripts/npc.gd<>uid://d3ijj018hlbf7::::res://Assets/Human-Worker-Red.png
 postac1.tscn::PackedScene/PackedScene::8458348546731257784::1747077263::0::1::::<><><>0<>0<><>::uid://cit0mtychry6d::::res://Scripts/postac_1.gd<>uid://ch4q8r275m712::::res://Assets/16x16-RPG-characters/16x16-RPG-characters/preview.png
 Press_E_to_play.tscn::PackedScene/PackedScene::4946970079975601086::1747077263::0::1::::<><><>0<>0<><>::
 Press_E_to_play_blackjack.tscn::PackedScene/PackedScene::4196082194491158964::1747323139::0::1::::<><><>0<>0<><>::
 README.md::TextFile/TextFile::-1::1747333790::0::1::::<><><>0<>0<><>::
 reel.tscn::PackedScene/PackedScene::6743901545030241004::1747077263::0::1::::<><><>0<>0<><>::uid://bfxhe6yc4ilid::::res://Scripts/Reel.gd<>uid://ltbqnool68e0::::res://Assets/symbole.png<>uid://dud6vpao60v7r::::res://Assets/reelFrame.png<>uid://cmsvldee7bdjf::::res://Assets/reelMask.png
-roulette.tscn::PackedScene/PackedScene::5488451682722097389::1747946718::0::1::::<><><>0<>0<><>::uid://cws4awqr2xlow::::res://Assets/roulette/wheel_to_convert.png<>uid://hqfbtyer88ah::::res://Scripts/wheel.gd<>uid://bds7osfx60ln4::::res://Assets/roulette/arrow_down.png
+roulette.tscn::PackedScene::5488451682722097389::1748533508::0::1::::<><><>0<>0<><>::uid://cws4awqr2xlow::::res://Assets/roulette/wheel_to_convert.png<>uid://hqfbtyer88ah::::res://Scripts/wheel.gd<>uid://bds7osfx60ln4::::res://Assets/roulette/arrow_down.png
 signal_bank.tscn::PackedScene/PackedScene::3123589072125155327::1747077263::0::1::::<><><>0<>0<><>::uid://djidbvg4nfxt3::::res://Scripts/SignalBank.gd
-slot_machine.tscn::PackedScene/PackedScene::6260737428090815904::1747946686::0::1::::<><><>0<>0<><>::uid://ro88xypmhe40::::res://Scripts/slot_machine_ui.gd<>uid://bro2msl27mi83::::res://Assets/slot-machine1.png<>uid://c3c2cqtdm7tb5::::res://Scene/reel.tscn<>uid://ojkg8ilbedkj::::res://Assets/slot-machine2.png
+slot_machine.tscn::PackedScene::6260737428090815904::1748533508::0::1::::<><><>0<>0<><>::uid://ro88xypmhe40::::res://Scripts/slot_machine_ui.gd<>uid://bro2msl27mi83::::res://Assets/slot-machine1.png<>uid://c3c2cqtdm7tb5::::res://Scene/reel.tscn<>uid://ojkg8ilbedkj::::res://Assets/slot-machine2.png
 UI_area_automaty.tscn::PackedScene/PackedScene::4466134058837374096::1747077263::0::1::::<><><>0<>0<><>::uid://ddwcae82dijwq::::res://Scripts/ui_area_automaty.gd
 ::res://Scripts/::1747946811
 blackjack_gra.gd::GDScript/GDScript::1949215963932970356::1747323139::0::1::::<>Control<><>0<>0<><>::
