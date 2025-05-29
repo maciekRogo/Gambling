@@ -15,6 +15,8 @@ Folder zawiera sceny używane w projekcie gry. Poniżej znajduje się opis każd
 10. [Press_E_to_play_blackjack.tscn](#press_e_to_play_blackjacktscn)
 11. [postac1.tscn](#postac1tscn)
 12. [UI_area_automaty.tscn](#ui_area_automatyt)
+13. [roulette.tscn](#roulettetscn)
+14. [TestyWydajnosciowe.tscn](#TestyWydajnosciowetscn)
 
 ---
 
@@ -168,3 +170,22 @@ Plik definiuje obszar interakcji dla automatów do gry. Zawartość:
   - `body_exited`
 
 [Zobacz plik w repozytorium](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scene/UI_area_automaty.tscn)
+
+---
+
+## roulette.tscn
+Scena z grą w ruletkę:
+- Zawiera elementy planszy, koło ruletki i interfejs obstawiania.
+- Pozwala graczowi obstawiać i uruchomić losowanie.
+
+[Zobacz plik w repozytorium](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scene/roulette.tscn)
+
+---
+
+## TestyWydajnosciowe.tscn
+Scena przeznaczona do testów wydajności:
+- Umożliwia sprawdzenie wydajności gry w różnych warunkach.
+
+[Zobacz plik w repozytorium](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scene/TestyWydajnosciowe.tscn)
+
+---
