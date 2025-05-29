@@ -10,6 +10,8 @@ Pliki w folderze `testy` to:
 - `test_postac1.gd`: Testy dotyczące postaci gracza.
 - `test_reel.gd`: Testy dla mechanizmu bębnów (reel) w grze.
 - `test_slot_machine_ui.gd`: Testy interfejsu użytkownika automatu do gry.
+- `TestyWydajnosciowe.gd`: Testy wydajnościowe projektu.
+- `test_roulette.gd`: Testy modułu ruletki.
 
 Każdy plik posiada również powiązany plik `.uid`, który prawdopodobnie przechowuje metadane lub unikalne identyfikatory.
 
