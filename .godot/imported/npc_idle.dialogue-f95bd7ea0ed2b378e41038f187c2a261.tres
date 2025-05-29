@@ -1,0 +1,118 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ktsgj"]
+
+[resource]
+script = ExtResource("1_ktsgj")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("NPC")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "NPC",
+&"id": "1",
+&"next_id": "2",
+&"text": "Pamiętaj, młody... automaty to nie są twoi przyjaciele.",
+&"type": "dialogue"
+},
+"2": {
+&"character": "NPC",
+&"id": "2",
+&"next_id": "3",
+&"text": "Ale też się nie poddawaj za szybko. Czasem trzeba przegrać, żeby nauczyć się wygrywać.",
+&"type": "dialogue"
+},
+"3": {
+&"character": "NPC",
+&"id": "3",
+&"next_id": "4",
+&"text": "Najważniejsze to grać z głową... i znać moment, kiedy odejść.",
+&"type": "dialogue"
+},
+"4": {
+&"id": "4",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "SigBank"
+}, {
+&"i": 11,
+&"type": &"dot"
+}, {
+&"i": 12,
+&"type": &"variable",
+&"value": "is_chatting"
+}, {
+&"i": 24,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 26,
+&"type": &"variable",
+&"value": "false"
+}]),
+&"is_blocking": true
+},
+&"next_id": "5",
+&"type": "mutation"
+},
+"5": {
+&"id": "5",
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "SigBank"
+}, {
+&"i": 11,
+&"type": &"dot"
+}, {
+&"i": 12,
+&"type": &"variable",
+&"value": "is_roaming"
+}, {
+&"i": 23,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 25,
+&"type": &"variable",
+&"value": "true"
+}]),
+&"is_blocking": true
+},
+&"next_id": "6",
+&"type": "mutation"
+},
+"6": {
+&"id": "6",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"7": {
+&"id": "7",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+}
+}
+raw_text = "~ start
+NPC: Pamiętaj, młody... automaty to nie są twoi przyjaciele.
+NPC: Ale też się nie poddawaj za szybko. Czasem trzeba przegrać, żeby nauczyć się wygrywać.
+NPC: Najważniejsze to grać z głową... i znać moment, kiedy odejść.
+set SigBank.is_chatting = false
+set SigBank.is_roaming = true
+=> END"
+metadata/dialogue_manager_version = "3.6.3"

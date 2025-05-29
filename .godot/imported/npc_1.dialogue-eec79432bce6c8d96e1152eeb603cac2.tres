@@ -1,0 +1,173 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_udyo3"]
+
+[resource]
+script = ExtResource("1_udyo3")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("NPC")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "NPC",
+&"id": "1",
+&"next_id": "2",
+&"text": "[[Hej|Siema|Witaj]], młody. Słyszałem, że próbujesz szczęścia na automatach?",
+&"type": "dialogue"
+},
+"10": {
+&"id": "10",
+&"next_id": "11",
+&"text": "Ja nigdy nie przegrywam!",
+&"type": "response"
+},
+"11": {
+&"character": "NPC",
+&"id": "11",
+&"next_id": "12",
+&"text": "Heh... to znaczy, że jeszcze nie grałeś wystarczająco długo.",
+&"type": "dialogue"
+},
+"12": {
+&"character": "NPC",
+&"id": "12",
+&"next_id": "18",
+&"text": "Nawet najlepsi miewają gorsze dni. Liczy się, jak sobie z tym radzisz.",
+&"type": "dialogue"
+},
+"13": {
+&"id": "13",
+&"next_id": "14",
+&"type": ""
+},
+"14": {
+&"id": "14",
+&"next_id": "15",
+&"text": "Maszyny są ustawione! Oszukują!",
+&"type": "response"
+},
+"15": {
+&"character": "NPC",
+&"id": "15",
+&"next_id": "18",
+&"text": "Może i tak, ale to gra losowa. Lepiej się z tym pogodzić i nie brać jej zbyt serio.",
+&"type": "dialogue"
+},
+"17": {
+&"id": "17",
+&"next_id": "18",
+&"type": ""
+},
+"18": {
+&"character": "NPC",
+&"id": "18",
+&"next_id": "20",
+&"text": "Powodzenia... i pamiętaj, najważniejsza jest frajda z gry.",
+&"type": "dialogue"
+},
+"19": {
+&"id": "19",
+&"next_id": "20",
+&"type": ""
+},
+"2": {
+&"character": "NPC",
+&"id": "2",
+&"next_id": "4",
+&"text": "Uważaj, te maszyny potrafią wciągnąć jak bagno.",
+&"type": "dialogue"
+},
+"20": {
+&"id": "20",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"21": {
+&"id": "21",
+&"next_id": "22",
+&"type": ""
+},
+"22": {
+&"id": "22",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"type": ""
+},
+"4": {
+&"character": "NPC",
+&"id": "4",
+&"next_id": "6",
+&"text": "Co chcesz wiedzieć?",
+&"type": "dialogue"
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"type": ""
+},
+"6": {
+&"id": "6",
+&"next_id": "7",
+&"responses": PackedStringArray("6", "10", "14"),
+&"text": "Masz jakieś rady?",
+&"type": "response"
+},
+"7": {
+&"character": "NPC",
+&"id": "7",
+&"next_id": "8",
+&"text": "Jasne. Graj tylko wtedy, gdy dobrze się bawisz, a nie żeby się wzbogacić.",
+&"type": "dialogue"
+},
+"8": {
+&"character": "NPC",
+&"id": "8",
+&"next_id": "18",
+&"text": "I zawsze ustal sobie limit. Jak wygrasz — świetnie. Jak przegrasz — trudno, ale nie wpadaj w złość.",
+&"type": "dialogue"
+},
+"9": {
+&"id": "9",
+&"next_id": "10",
+&"type": ""
+}
+}
+raw_text = "~ start
+NPC: [[Hej|Siema|Witaj]], młody. Słyszałem, że próbujesz szczęścia na automatach?
+NPC: Uważaj, te maszyny potrafią wciągnąć jak bagno.
+
+NPC: Co chcesz wiedzieć?
+
+- Masz jakieś rady?
+	NPC: Jasne. Graj tylko wtedy, gdy dobrze się bawisz, a nie żeby się wzbogacić.
+	NPC: I zawsze ustal sobie limit. Jak wygrasz — świetnie. Jak przegrasz — trudno, ale nie wpadaj w złość.
+
+- Ja nigdy nie przegrywam!
+	NPC: Heh... to znaczy, że jeszcze nie grałeś wystarczająco długo.
+	NPC: Nawet najlepsi miewają gorsze dni. Liczy się, jak sobie z tym radzisz.
+
+- Maszyny są ustawione! Oszukują!
+	NPC: Może i tak, ale to gra losowa. Lepiej się z tym pogodzić i nie brać jej zbyt serio.
+
+
+NPC: Powodzenia... i pamiętaj, najważniejsza jest frajda z gry.
+
+=> END
+"
+metadata/dialogue_manager_version = "3.6.3"
