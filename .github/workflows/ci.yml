@@ -21,7 +21,7 @@ jobs:
 
       - name: Run Gut tests
         run: |
-          ./godot --headless --quit --script addons/gut/gut_cmdln.gd -gdir=testy -gexit
+          ./godot --headless --quit -s addons/gut/gut_cmdln.gd -gdir=testy -gexit
 
       # (Opcjonalnie) Zapisz wyniki testów jako artefakt
       - name: Upload Gut results (if generated)
