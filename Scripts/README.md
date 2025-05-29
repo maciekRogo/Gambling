@@ -13,7 +13,9 @@ Folder zawiera skrypty używane w projekcie gry. Poniżej znajduje się opis ka�
 8. [postac_1.gd](#postac_1gd)
 9. [slot_machine_ui.gd](#slot_machine_uigd)
 10. [ui_area_automaty.gd](#ui_area_automatygd)
-
+11. [ui_area_blackjack.gd](#ui_area_blackjack.gd)
+12. [ui_area_roulette.gd](#ui_area_roullete.gd)
+13. [wheel.gd](wheel.gd)
 ---
 
 ## HUD.gd
@@ -119,5 +121,42 @@ Obsługuje obszar interakcji z automatem.
   - `_process`: Zmienia scenę na automat po kliknięciu.
 
 [Źródło skryptu](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scripts/ui_area_automaty.gd)
+
+---
+
+## ui_area_blackjack.gd
+Obsługuje obszar interakcji z automatem do gry w blackjacka.
+- **Typ**: `Area2D`
+- **Funkcje kluczowe**:
+  - `_on_body_entered`: Pokazuje prompt po wejściu gracza do obszaru blackjacka.
+  - `_on_body_exited`: Ukrywa prompt po wyjściu gracza.
+  - `_process`: Po naciśnięciu odpowiedniego przycisku przez gracza zmienia scenę na grę w blackjacka.
+
+[Źródło skryptu](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scripts/ui_area_blackjack.gd)
+
+---
+
+## ui_area_roulette.gd
+Obsługuje obszar interakcji z automatem do gry w ruletkę.
+- **Typ**: `Area2D`
+- **Funkcje kluczowe**:
+  - `_on_body_entered`: Pokazuje prompt po wejściu gracza do obszaru ruletki.
+  - `_on_body_exited`: Ukrywa prompt po wyjściu gracza.
+  - `_process`: Po naciśnięciu odpowiedniego przycisku przez gracza zmienia scenę na grę w ruletkę.
+
+[Źródło skryptu](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scripts/ui_area_roulette.gd)
+
+---
+
+## wheel.gd
+Obsługuje całą logikę koła ruletki, obstawiania, określania wyniku i wypłat.
+- **Typ**: `Sprite2D`
+- **Funkcje kluczowe**:
+  - Obsługa przycisków obstawiania i startu.
+  - Losowe kręcenie kołem i zatrzymanie z wyliczeniem wygrywającego numeru.
+  - Określanie wygranej na podstawie obstawienia (np. liczby, koloru, parzystości).
+  - Aktualizacja stanu pieniędzy gracza.
+
+[Źródło skryptu](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scripts/wheel.gd)
 
 ---
