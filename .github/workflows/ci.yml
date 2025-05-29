@@ -1,0 +1,32 @@
+name: Godot Gut Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download Godot from GitHub Releases
+        run: |
+          wget https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip
+          unzip Godot_v4.4.1-stable_linux.x86_64.zip
+          mv Godot_v4.4.1-stable_linux.x86_64 godot
+          chmod +x godot
+
+      - name: Run Gut tests
+        run: |
+          ./godot --headless --quit -s addons/gut/gut_cmdln.gd -gdir=testy -gexit
+
+      # (Opcjonalnie) Zapisz wyniki testów jako artefakt
+      - name: Upload Gut results (if generated)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gut-results
+          path: res://gut_reports/

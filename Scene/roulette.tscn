@@ -378,3 +378,12 @@ text = "ODD"
 custom_minimum_size = Vector2(104, 0)
 layout_mode = 2
 text = "19-36"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1635.0
+offset_top = 2.0
+offset_right = 1731.0
+offset_bottom = 54.0
+text = "Wyjdź"
+
+[connection signal="pressed" from="Button2" to="wheel" method="_on_button_2_pressed"]

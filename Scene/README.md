@@ -15,6 +15,8 @@ Folder zawiera sceny używane w projekcie gry. Poniżej znajduje się opis każd
 10. [Press_E_to_play_blackjack.tscn](#press_e_to_play_blackjacktscn)
 11. [postac1.tscn](#postac1tscn)
 12. [UI_area_automaty.tscn](#ui_area_automatyt)
+13. [roulette.tscn](#roulettetscn)
+14. [TestyWydajnosciowe.tscn](#TestyWydajnosciowetscn)
 
 ---
 
@@ -168,3 +170,39 @@ Plik definiuje obszar interakcji dla automatów do gry. Zawartość:
   - `body_exited`
 
 [Zobacz plik w repozytorium](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scene/UI_area_automaty.tscn)
+
+---
+
+## roulette.tscn
+Plik definiuje scenę gry w ruletkę. Zawartość:
+
+- **Skrypt:** `Scripts/wheel.gd` (przypisany do node’a `wheel`)
+- **Tekstury:**
+  - Koło ruletki: `Assets/roulette/wheel_to_convert.png`
+  - Wskaźnik: `Assets/roulette/arrow_down.png`
+- **Node'y:**
+  - `wheel` (Sprite2D): Prezentuje i animuje koło ruletki, obsługuje logikę losowania.
+  - `Button`: Przycisk „Start” do uruchomienia zakręcenia koła.
+  - `BetInput` (LineEdit): Pole do wpisania kwoty zakładu.
+  - `GridContainer` oraz przyciski: Umożliwiają wybór numerów oraz zakładów specjalnych ("EVEN", "ODD", "RED", "BLACK", "1st 12" itd.).
+  - `Button2`: Przycisk „Wyjdź” do opuszczenia sceny.
+- **Połączenia sygnałów:**
+  - `pressed` z przycisku „Wyjdź” do metody `_on_button_2_pressed` w node `wheel`.
+
+[Zobacz plik w repozytorium](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scene/roulette.tscn)
+
+---
+
+## TestyWydajnosciowe.tscn
+Plik definiuje scenę testów wydajności gry. Zawartość:
+
+- **Skrypt:** `testy/TestyWydajnosciowe.gd` (przypisany do node’a `reel`)
+- **Node'y:**
+  - `TestyWydajnosciowe` (Node2D): Główny node sceny.
+  - `cala_gra` (Node2D): Node potomny, prawdopodobnie do testowania pełnej gry.
+  - `reel` (Node2D): Node z przypisanym skryptem testowym.
+
+[Zobacz plik w repozytorium](https://github.com/maciekRogo/Gambling/blob/victor-dev/Scene/TestyWydajnosciowe.tscn)
+
+---
+

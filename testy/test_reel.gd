@@ -2,6 +2,9 @@ extends GutTest
 
 var reel_scene = preload("res://Scene/reel.tscn") 
 var reel 
+var signal_emitted: bool = false
+var emitted_reelID: int = -1
+var emitted_rng: int = -1
 
 func before_each():
 
@@ -13,6 +16,10 @@ func before_each():
 func after_each():
 	remove_child(reel)
 	reel.queue_free()
+
+# ---------------------
+# TESTY JEDNOSTKOWE
+# ---------------------
 
 func test_initial_values():
 	assert_eq(reel.state, reel.STOP, "Początkowy stan powinien być STOP")
@@ -103,3 +110,71 @@ func test_scroll_reel_wraps_properly():
 	reel.reel1.position.y = 1001
 	reel._scroll_reel(reel.reel1, 0)  
 	assert_eq(reel.reel1.position.y, -1000.0, "Pozycja y powinna zostać zawinięta do -1000")
+	
+	
+# ---------------------
+# TESTY INTEGRACYJNE
+# ---------------------
+
+func _on_roll_finished(id: int, rng: int) -> void:
+	signal_emitted = true
+	emitted_reelID = id
+	emitted_rng = rng
+	
+func test_full_reel_cycle_emits_signal():
+	SigBank.rollFinished.connect(_on_roll_finished)
+
+	reel._startRoll(reel.reelID, 0.1)
+	await get_tree().process_frame
+	await get_tree().create_timer(0.2).timeout 
+
+	await get_tree().create_timer(2.0).timeout  
+
+	assert_true(signal_emitted, "Sygnał rollFinished powinien zostać wyemitowany po zakończeniu cyklu")
+	assert_eq(emitted_reelID, reel.reelID, "reelID w sygnale powinien być zgodny")
+	assert_true(emitted_rng >= 0 and emitted_rng <= 9, "Wartość RNG powinna być w zakresie 0-9")
+
+
+
+func test_full_cycle_resets_reel_positions_properly():
+	reel._startRoll(reel.reelID, 0.2)
+	await get_tree().process_frame
+	await get_tree().create_timer(1.0).timeout
+	
+	var top_reel: Sprite2D = reel.reel1 if reel.reel1.z_index == 1 else reel.reel2
+	var bottom_reel: Sprite2D = reel.reel2 if reel.reel1.z_index == 1 else reel.reel1
+	
+	assert_almost_eq(bottom_reel.position.y - top_reel.position.y, 1000.0, 0.1, "Po zakończeniu tweena, odległość między bębnami powinna wynosić 1000px")
+
+
+func test_multiple_start_roll_calls_only_responds_to_correct_id():
+	var second_reel: Node2D = reel_scene.instantiate()
+	add_child(second_reel)
+	second_reel.reelID = reel.reelID + 1
+	await get_tree().process_frame
+
+	var signal_triggered: bool = false
+	SigBank.rollFinished.connect(func(id: int, rng: int) -> void: signal_triggered = true)
+
+	second_reel._startRoll(reel.reelID + 100, 0.2)
+	await get_tree().create_timer(0.5).timeout
+	
+	assert_false(signal_triggered, "Bęben nie powinien reagować na startRoll z nieprawidłowym reelID")
+
+	remove_child(second_reel)
+	second_reel.queue_free()
+
+
+func test_pressing_ui_accept_triggers_roll():
+	Input.action_press("ui_accept")
+	await get_tree().process_frame
+	Input.action_release("ui_accept")
+	reel.roll_duration = 0.1
+	reel.roll_back_duration = 0.05
+	var total_time := 0.0
+	while reel.state != reel.STOP and total_time < 3.0:
+		reel._process(0.05)
+		await get_tree().process_frame
+		total_time += 0.05
+
+	assert_eq(reel.state, reel.STOP, "Po naciśnięciu ui_accept cykl powinien się zakończyć i stan powinien być STOP")
